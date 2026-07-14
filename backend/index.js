@@ -1,7 +1,8 @@
-const cors = require('cors');
-app.use(cors());
+const express = require("express");
+const cors = require("cors");
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
@@ -19,6 +20,4 @@ app.post("/get-solution", (req, res) => {
   res.json({ answer });
 });
 
-app.listen(5000, () => {
-  console.log("Server running on 5000");
-});
+module.exports = app;
